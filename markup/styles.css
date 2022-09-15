@@ -1,0 +1,110 @@
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 50px;
+  border: solid rgb(0, 162, 255) 1px;
+}
+
+.filter li {
+  cursor: pointer;
+}
+
+.filter .active {
+  border: solid rgb(255, 0, 123) 1px;
+}
+
+.filter h4 {
+  margin-bottom: 5px;
+}
+
+.filter__cartoon,
+.filter__height,
+.filter__type {
+  margin-bottom: 15px;
+}
+
+.filter__cartoon ul,
+.filter__height ul,
+.filter__type ul {
+  display: flex;
+  column-gap: 10px;
+}
+
+.filter__bestseller {
+  display: flex;
+  align-items: center;
+}
+
+.filter__bestseller input {
+  cursor: pointer;
+}
+
+.filter__bestseller h4 {
+  margin: 0;
+  margin-right: 15px;
+}
+
+.sort .active {
+  border: solid rgb(255, 0, 123) 1px;
+}
+
+.sort div {
+  margin-bottom: 15px;
+}
+
+.sort__up,
+.sort__down {
+  padding: 5px;
+  border: solid rgb(0, 162, 255) 1px;
+  cursor: pointer;
+}
+
+.toys {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.toy {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+  padding: 15px;
+  border: solid rgb(0, 162, 255) 1px;
+  cursor: pointer;
+}
+
+.toy li {
+  margin-bottom: 15px;
+}
+
+.toy span {
+  display: block;
+  margin-bottom: 15px;
+}
+
+.toy__img img {
+  max-width: 200px;
+  max-height: 400px;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+}

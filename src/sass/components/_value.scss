@@ -1,0 +1,116 @@
+@use '../constants' as *;
+
+.cartoons,
+.heights,
+.types {
+  margin-bottom: 30px;
+
+  .title-h3 {
+    margin-bottom: 15px;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 10px;
+    row-gap: 10px;
+    margin: 0 -15px;
+  }
+
+  &__item {
+    position: relative;
+    z-index: 1;
+    padding: 5px 15px;
+    cursor: pointer;
+
+    &.active::before {
+      animation-duration: 0.5s;
+      animation-name: bounceIn;
+      opacity: 1;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      inset: 0;
+      border-radius: 30px;
+      background-color: $color1;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+  }
+
+  @media (max-width: $bp) {
+    &__list {
+      justify-content: center;
+    }
+  }
+}
+
+.heights__list {
+  max-width: 400px;
+
+  @media (max-width: $bp) {
+    max-width: none;
+  }
+}
+
+.types {
+  margin-bottom: 0;
+
+  @media (max-width: $bp) {
+    margin-bottom: 30px;
+  }
+}
+
+.bestseller {
+  margin-bottom: 30px;
+
+  .title-h3 {
+    margin-right: 15px;
+    cursor: pointer;
+  }
+
+  &__label {
+    display: inline-flex;
+    align-items: flex-end;
+  }
+
+  &__checkbox-hidden {
+    display: none;
+  }
+
+  &__checkbox-hidden:checked ~ &__checkbox svg {
+    display: block;
+    animation-duration: 0.5s;
+    animation-name: bounceIn;
+    opacity: 1;
+  }
+
+  &__checkbox {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+    border: 2px $color2 solid;
+    cursor: pointer;
+
+    svg {
+      display: none;
+      position: absolute;
+      top: calc(50% - 10px);
+      left: calc(50% - 10px);
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  @media (max-width: $bp) {
+    text-align: center;
+
+    &__label {
+      justify-content: center;
+    }
+  }
+}

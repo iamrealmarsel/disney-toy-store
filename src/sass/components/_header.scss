@@ -1,0 +1,81 @@
+@use '../constants' as *;
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  margin: 0 auto 15px;
+
+  &__color {
+    color: $color1;
+    font-size: 60px;
+  }
+
+  &__title {
+    font-family: $ff2;
+    font-size: 48px;
+    font-weight: 400;
+    color: $color2-light;
+  }
+
+  &__favorites {
+    display: none;
+  }
+
+  &__volume {
+    min-width: 48px;
+    padding-top: 14px;
+    margin-left: auto;
+    cursor: pointer;
+  }
+
+  &__volume.active {
+    .header__volume-muted {
+      display: none;
+    }
+    .header__volume-on {
+      display: block;
+      animation-duration: 0.5s;
+      animation-name: bounceIn;
+      opacity: 1;
+    }
+  }
+
+  &__volume-muted {
+    display: block;
+    animation-duration: 0.5s;
+    animation-name: bounceIn;
+    opacity: 1;
+  }
+
+  &__volume-on {
+    display: none;
+  }
+
+  &__store {
+    position: relative;
+    width: 100%;
+    max-width: 100px;
+    margin-left: 15px;
+
+    img {
+      height: 96px;
+    }
+  }
+
+  &__store-count {
+    position: absolute;
+    top: calc(50% + 15px);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 5px;
+    border-radius: 100px;
+    background-color: $color3;
+    line-height: 1;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 18px;
+    color: $color2-light;
+  }
+}

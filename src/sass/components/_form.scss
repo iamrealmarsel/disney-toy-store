@@ -1,0 +1,55 @@
+@use '../constants' as *;
+
+.input {
+  width: 100%;
+  padding: 5px 15px;
+  background-color: transparent;
+  border: 2px $color2 solid;
+  color: $color2-light;
+  color: #fff;
+  border-radius: 30px;
+  font-size: 24px;
+  outline: transparent;
+
+  &:focus {
+    outline: transparent;
+    border: 2px $color2-light solid;
+  }
+
+  &::placeholder {
+    color: $color2;
+  }
+}
+
+.button {
+  width: 100%;
+  max-width: 190px;
+  padding: 5px 0;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.reset {
+  .button:active {
+    transform: translateY(3px);
+    box-shadow: 0px 0 0px 0px $color2-shadow;
+  }
+
+  &__filters {
+    background: $color2;
+    border-top-left-radius: 30px;
+    box-shadow: 0px 3px 0px 0px $color2-shadow;
+
+    transition: 0.3s box-shadow, 0.3s transform;
+  }
+
+  &__all {
+    background: $color1;
+    border-top-right-radius: 30px;
+    box-shadow: 0px 3px 0px 0px $color1-shadow;
+
+    transition: 0.3s box-shadow, 0.3s transform;
+  }
+}

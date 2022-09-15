@@ -1,0 +1,222 @@
+@use '../constants' as *;
+
+.toys {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 20px;
+  margin: 0 -10px 30px;
+
+  &__col {
+    width: 33.3%;
+    padding: 0 10px;
+  }
+
+  @media (max-width: $bp) {
+    &__col {
+      width: 50%;
+    }
+  }
+}
+
+.toy {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  height: 400px;
+  min-height: 100%;
+  padding: 30px;
+  padding-right: 15px;
+  border-radius: 30px;
+  background-color: #fef4d3;
+  color: $color3;
+
+  &:hover {
+    animation: wobble 0.8s;
+  }
+
+  &__desc {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    white-space: nowrap;
+  }
+
+  &__title {
+    margin-bottom: 5px;
+  }
+
+  &__features {
+    margin: auto 0;
+  }
+
+  &__feature {
+    margin-bottom: 5px;
+  }
+
+  &__price {
+    font-weight: 600;
+  }
+
+  &__buttons {
+    display: flex;
+  }
+
+  &__store {
+    height: 60px;
+    max-width: 60px;
+    cursor: pointer;
+  }
+
+  &__store_full {
+    display: none;
+  }
+
+  &__store_empty {
+    animation-duration: 0.5s;
+    animation-name: bounceIn;
+  }
+
+  &__store.active {
+    .toy__store_full {
+      display: block;
+      animation-duration: 0.5s;
+      animation-name: bounceIn;
+      animation-fill-mode: forwards;
+    }
+
+    .toy__store_empty {
+      display: none;
+    }
+  }
+
+  &__favorite {
+    display: none;
+    cursor: pointer;
+  }
+
+  &__img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+
+  &_best .toy__ribbon {
+    display: block;
+  }
+
+  &__ribbon {
+    display: none;
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    width: 80px;
+    height: 80px;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+
+  &__ribbon-text {
+    position: absolute;
+    top: 13px;
+    right: -62px;
+    width: 225px;
+    padding: 7px 0;
+    background-color: $color1;
+    color: #fff;
+    box-shadow: 0px 1px 5px 2px rgba(76, 21, 58, 0.3);
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+    text-align: center;
+    transform: rotate(-45deg);
+    font-size: 18px;
+    line-height: 1;
+  }
+
+  &_spongebob {
+    background-color: hsl(60, 90%, 85%, 0.9);
+  }
+  &_squidward {
+    background-color: hsl(115, 32%, 85%, 0.9);
+  }
+  &_patrick {
+    background-color: hsl(353, 84%, 85%, 0.9);
+  }
+  &_joy {
+    background-color: hsl(53, 81%, 85%, 0.9);
+  }
+  &_anger {
+    background-color: hsl(26, 92%, 85%, 0.9);
+  }
+  &_bing-bong {
+    background-color: hsl(320, 57%, 85%, 0.9);
+  }
+  &_wall-e {
+    background-color: hsl(49, 64%, 85%, 0.9);
+  }
+  &_eve {
+    background-color: hsl(203, 44%, 85%, 0.9);
+  }
+  &_woody {
+    background-color: hsl(46, 96%, 85%, 0.9);
+  }
+  &_buzz-lightyear {
+    background-color: hsl(281, 42%, 85%, 0.9);
+  }
+  &_jessie {
+    background-color: hsl(5, 64%, 85%, 0.9);
+  }
+  &_forky {
+    background-color: hsl(194, 74%, 85%, 0.9);
+  }
+  &_lotso {
+    background-color: hsl(349, 70%, 85%, 0.9);
+  }
+  &_po {
+    background-color: hsl(25, 49%, 85%, 0.9);
+  }
+  &_tigress {
+    background-color: hsl(29, 64%, 85%, 0.9);
+  }
+  &_tai-lung {
+    background-color: hsl(194, 12%, 85%, 0.9);
+  }
+  &_sullivan {
+    background-color: hsl(192, 93%, 85%, 0.9);
+  }
+  &_wazowski {
+    background-color: hsl(85, 58%, 85%, 0.9);
+  }
+  &_sid {
+    background-color: hsl(43, 48%, 85%, 0.9);
+  }
+  &_scrat {
+    background-color: hsl(35, 50%, 85%, 0.9);
+  }
+  &_buck {
+    background-color: hsl(87, 40%, 85%, 0.9);
+  }
+  &_carl {
+    background-color: hsl(69, 76%, 85%, 0.9);
+  }
+  &_dug {
+    background-color: hsl(33, 93%, 85%, 0.9);
+  }
+  &_joe {
+    background-color: hsl(185, 44%, 85%, 0.9);
+  }
+  &_22 {
+    background-color: hsl(275, 17%, 85%, 0.9);
+  }
+  &_tramp {
+    background-color: hsl(229, 8%, 85%, 0.9);
+  }
+  &_lady {
+    background-color: hsl(27, 57%, 85%, 0.9);
+  }
+}

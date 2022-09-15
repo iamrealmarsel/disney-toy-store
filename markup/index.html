@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <header class="header">
+        <h1>Toy Store</h1>
+        <span>Корзина: 0</span>
+      </header>
+      <section class="filter">
+        <div>
+          <h3>Фильтр по значению</h3>
+          <div class="filter__cartoon">
+            <h4>мультфильм:</h4>
+            <ul>
+              <li>Toy Story</li>
+              <li class="active">WALL-E</li>
+              <li>Soul</li>
+            </ul>
+          </div>
+          <div class="filter__height">
+            <h4>высота:</h4>
+            <ul>
+              <li>20 см</li>
+              <li>30 см</li>
+              <li class="active">40 см</li>
+            </ul>
+          </div>
+          <div class="filter__type">
+            <h4>тип:</h4>
+            <ul>
+              <li class="active">soft</li>
+              <li>figure</li>
+              <li>app-controlled</li>
+            </ul>
+          </div>
+          <div class="filter__bestseller">
+            <h4>best-seller:</h4>
+            <input type="checkbox" />
+          </div>
+        </div>
+        <div>
+          <h3>Фильтр по диапазону</h3>
+          <div>
+            <span>Год выхода на рынок:</span>
+            <input type="range" />
+          </div>
+          <div>
+            <span>Количество на складе:</span>
+            <input type="range" />
+          </div>
+        </div>
+        <div class="sort">
+          <h3>Сортировка</h3>
+          <div>
+            <span>По имени:</span>
+            <span class="sort__up active">↑</span>
+            <span class="sort__down">↓</span>
+          </div>
+          <div>
+            <span>По году:</span>
+            <span class="sort__up">↑</span>
+            <span class="sort__down">↓</span>
+          </div>
+        </div>
+        <div>
+          <h3>Поиск</h3>
+          <div>
+            <input type="text" />
+          </div>
+        </div>
+      </section>
+      <section class="cards">
+        <div class="toys">
+          <div class="toy">
+            <div class="toy__desc">
+              <span>Toy Story</span>
+              <h2>Woody</h2>
+              <ul>
+                <li>figure</li>
+                <li>40 см</li>
+                <li>1995 год</li>
+                <li>5 шт</li>
+                <li>популярный: да</li>
+              </ul>
+              <span>В корзине: да</span>
+              <span>В избранном: да</span>
+            </div>
+            <div class="toy__img">
+              <img src="img/woody.jpg" alt="woody" />
+            </div>
+          </div>
+          <div class="toy">
+            <div class="toy__desc">
+              <span>WALL-E</span>
+              <h2>WALL-E</h2>
+              <ul>
+                <li>app-controlled</li>
+                <li>20 см</li>
+                <li>2000 год</li>
+                <li>15 шт</li>
+                <li>популярный: да</li>
+              </ul>
+              <span>В корзине: нет</span>
+              <span>В избранном: да</span>
+            </div>
+            <div class="toy__img">
+              <img src="img/wall-e.jpg" alt="wall-e" />
+            </div>
+          </div>
+          <div class="toy">
+            <div class="toy__desc">
+              <span>Ice Age</span>
+              <h2>Sid</h2>
+              <ul>
+                <li>soft</li>
+                <li>30 см</li>
+                <li>2005 год</li>
+                <li>30 шт</li>
+                <li>популярный: нет</li>
+              </ul>
+              <span>В корзине: нет</span>
+              <span>В избранном: нет</span>
+            </div>
+            <div class="toy__img">
+              <img src="img/sid.jpg" alt="sid" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer class="footer">футер</footer>
+    </main>
+  </body>
+</html>

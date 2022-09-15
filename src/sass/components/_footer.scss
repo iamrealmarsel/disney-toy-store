@@ -1,0 +1,18 @@
+@use '../constants' as *;
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border-radius: 30px;
+  background-color: $color-bg;
+
+  &__rsschool {
+    flex-shrink: 0;
+
+    img {
+      width: 100px;
+    }
+  }
+}

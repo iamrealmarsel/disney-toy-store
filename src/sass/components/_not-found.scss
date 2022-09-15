@@ -1,0 +1,20 @@
+@use '../constants' as *;
+
+.not-found {
+  width: 100%;
+  padding: 30px 15px;
+  margin: auto 10px;
+  text-align: center;
+  border-radius: 30px;
+  background-color: $color-bg;
+
+  &__msg {
+    margin-bottom: 30px;
+  }
+
+  &__img {
+    max-width: 200px;
+    height: 280px;
+    margin: 0 auto;
+  }
+}
