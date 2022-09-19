@@ -1,0 +1,20 @@
+{
+  "root": true,
+  "plugins": ["@typescript-eslint"],
+  "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended", "prettier"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2021,
+    "sourceType": "module"
+  },
+  "env": {
+    "es2021": true,
+    "browser": true,
+    "node": true
+  },
+  "ignorePatterns": ["dist", "node_modules", "config"],
+  "rules": {
+    "no-console": 1,
+    "@typescript-eslint/no-explicit-any": 2
+  }
+}
