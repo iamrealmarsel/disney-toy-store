@@ -19,8 +19,8 @@
 
 ## Функциональные требования
 
-Пример:
-![screenshot](img/posts/disney-toy-store/reference.png)
+Пример:  
+![reference](https://user-images.githubusercontent.com/20097612/194789729-d9534751-b21b-4812-ab11-83e1b574fcb8.png)
 
 1. Главная страница содержит все товары магазина а также фильтры, строку поиска, поле для сортировки.
 
